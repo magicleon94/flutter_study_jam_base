@@ -1,9 +1,10 @@
-# Flutter codelab test 2
 id: 0
 author: Antonello Galipò and Gonçalo Palma
 categories: apps, flutter
 environments: web
 status: draft
+
+# Flutter codelab test 2
 
 ## Step 1
 Duration 00:30
