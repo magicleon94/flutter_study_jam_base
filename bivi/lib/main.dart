@@ -95,8 +95,17 @@ class MyBiography extends StatelessWidget {
         title: Text("Antonello Galipò"),
         centerTitle: true,
       ),
-      body: Container(
-        color: Colors.red,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Image.network(
+            "https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MTkvb3JpZ2luYWwvY3V0ZS1raXR0ZW4uanBn",
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: Text("A chi non piacciono i gattini?"),
+          )
+        ],
       ),
     );
   }
