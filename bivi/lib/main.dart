@@ -34,45 +34,69 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("BIVI!"),
       ),
       body: Center(
-        child: Container(
-          width: 300,
-          height: 200,
-          child: Card(
-            elevation: 2,
-            color: Theme.of(context).accentColor,
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Icon(
-                        Icons.person,
-                        color: Colors.white,
-                        size: 40,
-                      ),
-                      Text(
-                        "Antonello Galipò",
-                        style: _style,
-                      )
-                    ],
-                  ),
-                  Text(
-                    "+39 000 000 000",
-                    style: _style,
-                  ),
-                  Text(
-                    "antonello.galipo@gmail.com",
-                    style: _style,
-                  )
-                ],
+        child: InkWell(
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => MyBiography(),
+              ),
+            );
+          },
+          child: Container(
+            width: 300,
+            height: 200,
+            child: Card(
+              elevation: 2,
+              color: Theme.of(context).accentColor,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Icon(
+                          Icons.person,
+                          color: Colors.white,
+                          size: 40,
+                        ),
+                        Text(
+                          "Antonello Galipò",
+                          style: _style,
+                        )
+                      ],
+                    ),
+                    Text(
+                      "+39 000 000 000",
+                      style: _style,
+                    ),
+                    Text(
+                      "antonello.galipo@gmail.com",
+                      style: _style,
+                    )
+                  ],
+                ),
               ),
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class MyBiography extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Antonello Galipò"),
+        centerTitle: true,
+      ),
+      body: Container(
+        color: Colors.red,
       ),
     );
   }
