@@ -4,16 +4,32 @@ categories: apps, flutter
 environments: web
 status: draft
 
-# Flutter codelab test - the final try
+# BIVI - Biglietto da Visita, a Flutter Codelab
 
-## Step 1
-Duration 00:30
+## Cosa è Flutter?
+Duration 00:02
 
-This is the first step of the codelab.
-### Do a self-highfive
-* Open your hand
-* Open your other hand
-* Clap them, highfive!
+Flutter è blah blah blah
+
+## Preparazione
+Dutarion 00:20
+
+Prima di iniziare sono necessarie due cose, [installare Flutter sul proprio computer](https://flutter.dev/docs/get-started/install) e [configurare un editor per utilizzarlo con Flutter](https://flutter.dev/docs/get-started/editor).
+
+Una volta fatto ciò saremo in grado di scrivere applicazioni in Flutter e di eseguire su:
+* dispositivi fisici 
+* emulatore Android
+* emulatore iOS
+
+### Crea un nuovo progetto Flutter
+Duration 00:05
+
+A seconda dell'editor scelto, crea un nuovo progetto Flutter seguendo le istruzioni a [questo link](https://flutter.dev/docs/get-started/test-drive).
+
+Chiama l'applicazione BIVI.
+
+### Rimuovi il codice di esempio per un inizio pulito
+
 
 Positive
 : This will cheer your spirit
