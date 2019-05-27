@@ -33,8 +33,37 @@ Duration 00:02
 
 Cancella tutto il codice contenuto in `lib/main.dart` ed incolla il seguente:
 
-```
-code to paste
+``` dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("BIVI!"),
+      ),
+      body: Center(
+        child: Text("Placeholder"),
+      ),
+    );
+  }
+}
 ```
 
 ## Creazione della pagina principale
@@ -49,6 +78,9 @@ Ricorda:
 - gli attributi `MainAxisAlignment` e `CrossAxisAlignmenr` di `Row` e `Column`
 - l'attributo `style` di `Text`
 
+La schermata sarà simile al seguente wireframe:
+![card](./card.jpg)
+
 ## Interattività e navigazione
 Duration 01:00
 
@@ -58,8 +90,16 @@ Inserendo un widget come child di un InkWell, sarà infatti possibile specificar
 
 Le azioni da compiere a fronte di un evento di tocco sono descritte da funzioni di eseguire, che possono essere fornite al widget in uno dei seguenti modi:
 
-```
-code to paste
+``` dart
+InkWell(
+    onTap: () {
+    print("tapped!");
+    },
+    onDoubleTap: () {
+    print("double tapped!");
+    },
+    child: //Widget da rendere tappabile,
+),
 ```
 
 ### La navigazione
@@ -70,7 +110,7 @@ La navigazione è gestita da un componente specializzato chiamato Navigator.
 
 Per navigare su una nuova schermata, un esempio di come effettuare il push di essa nello stack (pila) di navigazione in questo modo:
 
-```
+``` dart
 Navigator.of(context)
 .push(MaterialPageRoute(
     builder:(context){
@@ -85,12 +125,41 @@ costruita mediante il builder messo a disposizione dalla classe `MaterialPageRou
 
 ### Rendere interattivo il biglietto da visita
 È possibile combinare `InkWell` e le azioni col `Navigator` per aggiungere interattività 
-e navigare su una seconda schermata, che conterrà un'immagine ed una descrizione.
+e navigare su una seconda schermata, che al momento sarà vuota.
 
 Per fare ciò:
 
-1. Crea una nuova classe `pastepage` che estende `StatelessWidget`
-2. To be continued
+1. Crea una nuova schermata
+
+``` dart
+class MyBiography extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Antonello Galipò"),
+        centerTitle: true,
+      ),
+      body: Container(
+        color: Colors.red,
+      ),
+    );
+  }
+}
+```
+
+2. Rendi tappabile il biglietto da visita inserendolo in un `InkWell` ed usando `Navigator` in questo modo:
+``` dart
+Navigator.of(context)
+.push(MaterialPageRoute(
+    builder:(context){
+        return MyBiography();
+    }),
+);
+```
+
+## Caricamento immagini dalla rete
+
 
 
 ### Write some code
