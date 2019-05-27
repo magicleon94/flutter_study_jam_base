@@ -38,6 +38,8 @@ code to paste
 ```
 
 ## Creazione della pagina principale
+Duration 01:30
+
 In questa sezione creerai la pagina contenente la prima parte del biglietto da visita.
 
 Utilizza i widget `Card`, `Container`, `Row`, `Column` e `Text`per realizzare un layout simile a quello in figura.
@@ -47,15 +49,34 @@ Ricorda:
 - gli attributi `MainAxisAlignment` e `CrossAxisAlignmenr` di `Row` e `Column`
 - l'attributo `style` di `Text`
 
+## Interattività e navigazione
+Duration 01:00
 
-Positive
-: This will cheer your spirit
+### Il widget InkWell
+InkWell è uno dei widget piú comuni per rendere interattivo un wigdet. 
+Inserendo un widget come child di un InkWell, sarà infatti possibile specificare le azioni da compiere a fronte di un tap, doppio tap, long press, etc.
 
-Negative
-: Don't do that in public, you might look a little dumb
+Le azioni da compiere a fronte di un evento di tocco sono descritte da funzioni di eseguire, che possono essere fornite al widget in uno dei seguenti modi:
 
-## Step 2
-Duration 00:20
+```
+code to paste
+```
+
+### La navigazione
+La navigazione in Flutter puó essere vista come una pila di schermate (widget) della quale lo schermo visualizza la cima.
+Ogni volta che navighiamo su una nuova schermata, la aggiungiamo alla cima della pila. Ogni volta che torniamo indietro, rimuoviamo dalla cima della pila la schermata che stiamo visualizzando in quel momento.
+
+La navigazione è gestita da un componente specializzato chiamato Navigator.
+
+Per navigare su una nuova schermata, effettuiamo il push di essa nello stack (pila) di navigazione in questo modo:
+
+```
+Nagigator.of(context).push(...);
+```
+
+
+
+
 
 ### Write some code
 ``` dart
