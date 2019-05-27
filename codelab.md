@@ -68,14 +68,29 @@ Ogni volta che navighiamo su una nuova schermata, la aggiungiamo alla cima della
 
 La navigazione è gestita da un componente specializzato chiamato Navigator.
 
-Per navigare su una nuova schermata, effettuiamo il push di essa nello stack (pila) di navigazione in questo modo:
+Per navigare su una nuova schermata, un esempio di come effettuare il push di essa nello stack (pila) di navigazione in questo modo:
 
 ```
-Nagigator.of(context).push(...);
+Navigator.of(context)
+.push(MaterialPageRoute(
+    builder:(context){
+        return NewPage();
+    }),
+);
 ```
 
+Il codice riportato ottiene un riferimento all'istanza di `Navigator`
+relativa al contesto attuale, e richiede il push di una nuova pagina,
+costruita mediante il builder messo a disposizione dalla classe `MaterialPageRoute`.
 
+### Rendere interattivo il biglietto da visita
+È possibile combinare `InkWell` e le azioni col `Navigator` per aggiungere interattività 
+e navigare su una seconda schermata, che conterrà un'immagine ed una descrizione.
 
+Per fare ciò:
+
+1. Crea una nuova classe `pastepage` che estende `StatelessWidget`
+2. To be continued
 
 
 ### Write some code
