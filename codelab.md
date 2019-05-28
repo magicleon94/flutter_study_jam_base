@@ -159,7 +159,19 @@ Navigator.of(context)
 ```
 
 ## Caricamento immagini dalla rete
+In Flutter le immagini possono essere mostrate in diversi modi:
+* `Image.asset(path)`
+* `Image.memory(buffer)` ?
+* `Image.network(url)`
 
+La seconda pagina dell'app dovrà mostrare un'immagine recuperata da internet
+ed una piccola descrizione.
+
+Un esempio di immagine caricata da internet è il seguente:
+
+```dart
+Image.network("https://prova.example.com");
+```
 
 
 ### Write some code
