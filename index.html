@@ -103,7 +103,7 @@ class MyHomePage extends StatelessWidget {
 <li>gli attributi <code>MainAxisAlignment</code> e <code>CrossAxisAlignmenr</code> di <code>Row</code> e <code>Column</code></li>
 <li>l&#39;attributo <code>style</code> di <code>Text</code></li>
 </ul>
-<p>La schermata sarà simile al seguente wireframe:<br><img alt="card" src="img/4b2614049290033f.jpg"></p>
+<p>La schermata sarà simile al seguente wireframe:<br><img style="width: 200.00px" src="img/4b2614049290033f.jpeg"></p>
 
 
       </google-codelab-step>
@@ -139,7 +139,7 @@ class MyHomePage extends StatelessWidget {
 <p>È possibile combinare <code>InkWell</code> e le azioni col <code>Navigator</code> per aggiungere interattività<br>e navigare su una seconda schermata, che al momento sarà vuota.</p>
 <p>Per fare ciò:</p>
 <ol type="1">
-<li>Crea una nuova schermata<pre><code>class MyBiography extends StatelessWidget {
+<li>Crea una nuova schermata aggiungendo in fondo a <code>main.dart</code> il seguente<pre><code>class MyBiography extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
 return Scaffold(
@@ -169,9 +169,18 @@ builder:(context){
       </google-codelab-step>
     
       <google-codelab-step label="Caricamento immagini dalla rete" duration="0">
-        <h2 is-upgraded>Write some code</h2>
-<pre><code>print(&#34;Hello world&#34;);
+        <p>In Flutter le immagini possono essere mostrate in diversi modi:</p>
+<ul>
+<li><code>Image.asset(path)</code></li>
+<li><code>Image.memory(buffer)</code> ?</li>
+<li><code>Image.network(url)</code></li>
+</ul>
+<p>La seconda pagina dell&#39;app dovrà mostrare un&#39;immagine recuperata da internet<br>ed una piccola descrizione.</p>
+<p>Un esempio di immagine caricata da internet è il seguente:</p>
+<pre><code>Image.network(&#34;https://prova.example.com&#34;);
 </code></pre>
+<h2 is-upgraded>Completa la seconda schermata</h2>
+<p>Modifica il widget <code>MyBiography</code> includendo un&#39;immagine dalla rete ed un testo, per ottenere un layout simile:<br><img alt="MyBiography" src="img/eb943095a6af980a.jpg"><img style="width: 200.00px" src="img/eb943095a6af980a.jpeg"></p>
 
 
       </google-codelab-step>

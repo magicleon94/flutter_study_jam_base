@@ -1,5 +1,5 @@
 id: 0
-author: Antonello Galipò and Gonçalo Palma
+author: Antonello Galipò and Gonçalo Montes Palma
 categories: apps, flutter
 environments: web
 status: draft
@@ -78,9 +78,6 @@ Ricorda:
 - gli attributi `MainAxisAlignment` e `CrossAxisAlignmenr` di `Row` e `Column`
 - l'attributo `style` di `Text`
 
-La schermata sarà simile al seguente wireframe:
-![card](./card.jpg)
-
 ## Interattività e navigazione
 Duration 01:00
 
@@ -129,7 +126,7 @@ e navigare su una seconda schermata, che al momento sarà vuota.
 
 Per fare ciò:
 
-1. Crea una nuova schermata
+1. Crea una nuova schermata aggiungendo in fondo a `main.dart` il seguente
 
 ``` dart
 class MyBiography extends StatelessWidget {
@@ -159,9 +156,10 @@ Navigator.of(context)
 ```
 
 ## Caricamento immagini dalla rete
+Duration 00:05
 In Flutter le immagini possono essere mostrate in diversi modi:
 * `Image.asset(path)`
-* `Image.memory(buffer)` ?
+* `Image.memory(buffer)`
 * `Image.network(url)`
 
 La seconda pagina dell'app dovrà mostrare un'immagine recuperata da internet
@@ -170,14 +168,17 @@ ed una piccola descrizione.
 Un esempio di immagine caricata da internet è il seguente:
 
 ```dart
-Image.network("https://prova.example.com");
+Image.network(
+  "https://prova.example.com"
+);
 ```
 
 
-### Write some code
-``` dart
-print("Hello world");
-```
+## Completa la seconda schermata
+Duration 00:15
+Modifica il widget `MyBiography` includendo un'immagine dalla rete ed un testo in basso.
 
-## Final step
-You're done for the day!
+## Fine!
+Se sei arrivato fin qui significa che hai finito tutto in tempo, grande!
+
+Sentiti libero di sperimentare con altri widget dal [catalogo di Flutter](https://flutter.dev/docs/development/ui/widgets) e di chiedere al team eventuali dubbi!
