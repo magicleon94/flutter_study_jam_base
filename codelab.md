@@ -22,7 +22,9 @@ Tra le qualità di Flutter spiccano:
 - hot reload, che permette di sincronizzare le modifiche al codice con il dispositivo in maniera quasi istantanea, applicandole direttamente preservando lo stato dell'app. In questo modo sarà possibile vedere in tempo reale le modifiche effettuate senza dover incorrere in fastidiosi riavvii dell'applicazione.
 - totale controllo sulle animazioni
 
-Questa tecnologia sta subendo una forte crescita, trovando sempre più TO BE CONTINUED
+Questa tecnologia sta subendo una forte crescita ed è utilizzata da un numero di aziende e sviluppatori indipendenti sempre crescente (basti vedere lo [showcase](https://flutter.dev/showcase).
+
+Basta parlare, ora è il momento di mettersi a lavoro!
 
 ## Preparazione
 Duration 00:20
@@ -34,12 +36,17 @@ Una volta fatto ciò saremo in grado di scrivere applicazioni in Flutter e di es
 * emulatore Android
 * emulatore iOS
 
+Positive
+: Ricorda di lanciare il comando `flutter doctor` durante gli step dell'installazione in modo da avere una lista di quel che ancora manca da configurare.
+
 ## Crea un nuovo progetto Flutter
 Duration 00:05
 
 A seconda dell'editor scelto, crea un nuovo progetto Flutter seguendo le istruzioni a [questo link](https://flutter.dev/docs/get-started/test-drive).
 
 Chiama l'applicazione BIVI.
+
+Una volta creato il progetto, lancialo su un emulatore o un device fisico per assicurarti del corretto funzionamento dell'installazione di Flutter. Segui gli altri step delle istruzioni in modo da provare l'hot reload e da acquisire familiarità con l'ambiente.
 
 ## Rimuovi il codice di esempio per un inizio pulito
 Duration 00:02
