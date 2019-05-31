@@ -9,7 +9,20 @@ status: draft
 ## Cosa è Flutter?
 Duration 00:02
 
-Flutter è blah blah blah
+Flutter è il nuovo framework made in Google per la realizzazione di UI in maniera semplice e veloce.
+Il linguaggio di programmazione è Dart, anch'esso di casa Google.
+
+Il framework permette di generare interfacce grafiche pixel-perfect via codice, con tutti i vantaggi che ne possono conseguire. Possiamo infatti sfruttare le proprietà dei linguaggi di programmazione a oggetti per realizzare delle UI robuste e pulite velocemente ed in maniera semplice.
+
+Tra le qualità di Flutter spiccano:
+- performance molto simili a quelle native, in quanto il codice viene compilato direttamente per il device, senza attraversare schiere di layer, gestendo tutto in autonomia, dal rendering alla logica
+- linguaggio di programmazione semplice ed intuitivo, che risulta familiare sin da subito
+- ampio catalogo di widget out of the box sia per lo stile Material che per lo stile di iOS
+- semplicità di realizzazione di custom widget 
+- hot reload, che permette di sincronizzare le modifiche al codice con il dispositivo in maniera quasi istantanea, applicandole direttamente preservando lo stato dell'app. In questo modo sarà possibile vedere in tempo reale le modifiche effettuate senza dover incorrere in fastidiosi riavvii dell'applicazione.
+- totale controllo sulle animazioni
+
+Questa tecnologia sta subendo una forte crescita, trovando sempre più TO BE CONTINUED
 
 ## Preparazione
 Duration 00:20
