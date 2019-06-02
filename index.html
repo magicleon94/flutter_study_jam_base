@@ -29,7 +29,19 @@
     
       <google-codelab-step label="Cosa è Flutter?" duration="0">
         <p>Duration 00:02</p>
-<p>Flutter è blah blah blah</p>
+<p>Flutter è il nuovo framework made in Google per la realizzazione di UI in maniera semplice e veloce.<br>Il linguaggio di programmazione è Dart, anch&#39;esso di casa Google.</p>
+<p>Il framework permette di generare interfacce grafiche pixel-perfect via codice, con tutti i vantaggi che ne possono conseguire. Possiamo infatti sfruttare le proprietà dei linguaggi di programmazione a oggetti per realizzare delle UI robuste e pulite velocemente ed in maniera semplice.</p>
+<p>Tra le qualità di Flutter spiccano:</p>
+<ul>
+<li>performance molto simili a quelle native, in quanto il codice viene compilato direttamente per il device, senza attraversare schiere di layer, gestendo tutto in autonomia, dal rendering alla logica</li>
+<li>linguaggio di programmazione semplice ed intuitivo, che risulta familiare sin da subito</li>
+<li>ampio catalogo di widget out of the box sia per lo stile Material che per lo stile di iOS</li>
+<li>semplicità di realizzazione di custom widget</li>
+<li>hot reload, che permette di sincronizzare le modifiche al codice con il dispositivo in maniera quasi istantanea, applicandole direttamente preservando lo stato dell&#39;app. In questo modo sarà possibile vedere in tempo reale le modifiche effettuate senza dover incorrere in fastidiosi riavvii dell&#39;applicazione.</li>
+<li>totale controllo sulle animazioni</li>
+</ul>
+<p>Questa tecnologia sta subendo una forte crescita ed è utilizzata da un numero di aziende e sviluppatori indipendenti sempre crescente (basti vedere lo <a href="https://flutter.dev/showcase" target="_blank">showcase</a>.</p>
+<p>Basta parlare, ora è il momento di mettersi a lavoro!</p>
 
 
       </google-codelab-step>
@@ -43,6 +55,8 @@
 <li>emulatore Android</li>
 <li>emulatore iOS</li>
 </ul>
+<aside class="special"><p>Ricorda di lanciare il comando <code>flutter doctor</code> durante gli step dell&#39;installazione in modo da avere una lista di quel che ancora manca da configurare.</p>
+</aside>
 
 
       </google-codelab-step>
@@ -51,6 +65,7 @@
         <p>Duration 00:05</p>
 <p>A seconda dell&#39;editor scelto, crea un nuovo progetto Flutter seguendo le istruzioni a <a href="https://flutter.dev/docs/get-started/test-drive" target="_blank">questo link</a>.</p>
 <p>Chiama l&#39;applicazione BIVI.</p>
+<p>Una volta creato il progetto, lancialo su un emulatore o un device fisico per assicurarti del corretto funzionamento dell&#39;installazione di Flutter. Segui gli altri step delle istruzioni in modo da provare l&#39;hot reload e da acquisire familiarità con l&#39;ambiente.</p>
 
 
       </google-codelab-step>
@@ -103,7 +118,9 @@ class MyHomePage extends StatelessWidget {
 <li>gli attributi <code>MainAxisAlignment</code> e <code>CrossAxisAlignmenr</code> di <code>Row</code> e <code>Column</code></li>
 <li>l&#39;attributo <code>style</code> di <code>Text</code></li>
 </ul>
-<p>La schermata sarà simile al seguente wireframe:<br><img style="width: 200.00px" src="img/4b2614049290033f.jpeg"></p>
+<p class="image-container"><img src="img/4b2614049290033f.jpg"></p>
+<aside class="special"><p>non sentirti legato al disegno, libera la fantasia e sperimenta quanto più vuoi!</p>
+</aside>
 
 
       </google-codelab-step>
@@ -130,7 +147,7 @@ class MyHomePage extends StatelessWidget {
 <pre><code>Navigator.of(context)
 .push(MaterialPageRoute(
     builder:(context){
-        return NewPage();
+        return NewPage(); //la nuova pagina da pushare sulla navigazione
     }),
 );
 </code></pre>
@@ -169,24 +186,32 @@ builder:(context){
       </google-codelab-step>
     
       <google-codelab-step label="Caricamento immagini dalla rete" duration="0">
-        <p>In Flutter le immagini possono essere mostrate in diversi modi:</p>
+        <p>Duration 00:05<br>In Flutter le immagini possono essere mostrate in diversi modi:</p>
 <ul>
 <li><code>Image.asset(path)</code></li>
-<li><code>Image.memory(buffer)</code> ?</li>
+<li><code>Image.file(file)</code></li>
+<li><code>Image.memory(buffer)</code></li>
 <li><code>Image.network(url)</code></li>
 </ul>
 <p>La seconda pagina dell&#39;app dovrà mostrare un&#39;immagine recuperata da internet<br>ed una piccola descrizione.</p>
 <p>Un esempio di immagine caricata da internet è il seguente:</p>
-<pre><code>Image.network(&#34;https://prova.example.com&#34;);
+<pre><code>Image.network(
+  &#34;https://bit.ly/2Z08SbL&#34;
+);
 </code></pre>
-<h2 is-upgraded>Completa la seconda schermata</h2>
-<p>Modifica il widget <code>MyBiography</code> includendo un&#39;immagine dalla rete ed un testo, per ottenere un layout simile:<br><img alt="MyBiography" src="img/eb943095a6af980a.jpg"><img style="width: 200.00px" src="img/eb943095a6af980a.jpeg"></p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Final step" duration="0">
-        <p>You&#39;re done for the day!</p>
+      <google-codelab-step label="Completa la seconda schermata" duration="0">
+        <p>Duration 00:15<br>Modifica il widget <code>MyBiography</code> includendo un&#39;immagine dalla rete ed un testo in basso.<br><img src="img/eb943095a6af980a.jpg"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Fine!" duration="0">
+        <p>Se sei arrivato fin qui significa che hai finito tutto in tempo, grande!</p>
+<p>Sentiti libero di sperimentare con altri widget dal <a href="https://flutter.dev/docs/development/ui/widgets" target="_blank">catalogo di Flutter</a> e di chiedere al team eventuali dubbi o idee su misura per te!</p>
 
 
       </google-codelab-step>

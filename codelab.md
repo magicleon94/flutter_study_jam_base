@@ -98,6 +98,11 @@ Ricorda:
 - gli attributi `MainAxisAlignment` e `CrossAxisAlignmenr` di `Row` e `Column`
 - l'attributo `style` di `Text`
 
+<img src="./card.jpg" style="width: 200px"/>
+
+Positive
+: non sentirti legato al disegno, libera la fantasia e sperimenta quanto più vuoi!
+
 ## Interattività e navigazione
 Duration 01:00
 
@@ -131,7 +136,7 @@ Per navigare su una nuova schermata, un esempio di come effettuare il push di es
 Navigator.of(context)
 .push(MaterialPageRoute(
     builder:(context){
-        return NewPage();
+        return NewPage(); //la nuova pagina da pushare sulla navigazione
     }),
 );
 ```
@@ -179,6 +184,7 @@ Navigator.of(context)
 Duration 00:05
 In Flutter le immagini possono essere mostrate in diversi modi:
 * `Image.asset(path)`
+* `Image.file(file)`
 * `Image.memory(buffer)`
 * `Image.network(url)`
 
@@ -189,7 +195,7 @@ Un esempio di immagine caricata da internet è il seguente:
 
 ```dart
 Image.network(
-  "https://prova.example.com"
+  "https://bit.ly/2Z08SbL"
 );
 ```
 
@@ -197,8 +203,11 @@ Image.network(
 ## Completa la seconda schermata
 Duration 00:15
 Modifica il widget `MyBiography` includendo un'immagine dalla rete ed un testo in basso.
+<img src="./biography.jpg" style="width: 200px"/>
 
 ## Fine!
 Se sei arrivato fin qui significa che hai finito tutto in tempo, grande!
 
-Sentiti libero di sperimentare con altri widget dal [catalogo di Flutter](https://flutter.dev/docs/development/ui/widgets) e di chiedere al team eventuali dubbi!
+Sentiti libero di sperimentare con altri widget dal [catalogo di Flutter](https://flutter.dev/docs/development/ui/widgets) e di chiedere al team eventuali dubbi o idee su misura per te!
+
+
