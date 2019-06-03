@@ -40,7 +40,7 @@
 <li>hot reload, che permette di sincronizzare le modifiche al codice con il dispositivo in maniera quasi istantanea, applicandole direttamente preservando lo stato dell&#39;app. In questo modo sarà possibile vedere in tempo reale le modifiche effettuate senza dover incorrere in fastidiosi riavvii dell&#39;applicazione.</li>
 <li>totale controllo sulle animazioni</li>
 </ul>
-<p>Questa tecnologia sta subendo una forte crescita ed è utilizzata da un numero di aziende e sviluppatori indipendenti sempre crescente (basti vedere lo <a href="https://flutter.dev/showcase" target="_blank">showcase</a>.</p>
+<p>Questa tecnologia sta subendo una forte crescita ed è utilizzata da un numero di aziende e sviluppatori indipendenti sempre crescente (basti vedere lo <a href="https://flutter.dev/showcase" target="_blank">showcase</a>).</p>
 <p>Basta parlare, ora è il momento di mettersi a lavoro!</p>
 
 
@@ -53,10 +53,12 @@
 <ul>
 <li>dispositivi fisici</li>
 <li>emulatore Android</li>
-<li>emulatore iOS</li>
+<li>emulatore iOS (disponibile solo se si usa MacOS)</li>
 </ul>
-<aside class="special"><p>Ricorda di lanciare il comando <code>flutter doctor</code> durante gli step dell&#39;installazione in modo da avere una lista di quel che ancora manca da configurare.</p>
+<aside class="special"><p>Ricorda di lanciare il comando <code>flutter doctor</code> da riga di comando durante gli step dell&#39;installazione in modo da avere una lista di quel che ancora manca da configurare.</p>
 </aside>
+<p>Una volta terminata la configurazione, l&#39;output di <code>flutter doctor</code> dovrebbe essere simile a questo:</p>
+<p class="image-container"><img src="img/7e8bc232dcbb091f.png"></p>
 
 
       </google-codelab-step>
@@ -64,7 +66,7 @@
       <google-codelab-step label="Crea un nuovo progetto Flutter" duration="0">
         <p>Duration 00:05</p>
 <p>A seconda dell&#39;editor scelto, crea un nuovo progetto Flutter seguendo le istruzioni a <a href="https://flutter.dev/docs/get-started/test-drive" target="_blank">questo link</a>.</p>
-<p>Chiama l&#39;applicazione BIVI.</p>
+<p>Chiama l&#39;applicazione BIVI, nome &#34;originale&#34; che sta per <strong>Bi</strong>glietto da <strong>vi</strong>sita!</p>
 <p>Una volta creato il progetto, lancialo su un emulatore o un device fisico per assicurarti del corretto funzionamento dell&#39;installazione di Flutter. Segui gli altri step delle istruzioni in modo da provare l&#39;hot reload e da acquisire familiarità con l&#39;ambiente.</p>
 
 
@@ -85,12 +87,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,15 +113,16 @@ class MyHomePage extends StatelessWidget {
       <google-codelab-step label="Creazione della pagina principale" duration="0">
         <p>Duration 01:30</p>
 <p>In questa sezione creerai la pagina contenente la prima parte del biglietto da visita.</p>
-<p>Utilizza i widget <code>Card</code>, <code>Container</code>, <code>Row</code>, <code>Column</code> e <code>Text</code>per realizzare un layout simile a quello in figura.<br>Ricorda:</p>
+<p>Utilizza i widget <code>Card</code>, <code>Container</code>, <code>Row</code>, <code>Column</code>, <code>Icon</code> e <code>Text</code>per realizzare un layout simile a quello in figura.<br>Ricorda:</p>
 <ul>
 <li>gli attributi <code>color</code>, <code>width</code> ed <code>height</code> di <code>Container</code></li>
 <li>la dimensione di una <code>Card</code> è dettata dal <code>Container</code> che la contiene</li>
 <li>gli attributi <code>MainAxisAlignment</code> e <code>CrossAxisAlignmenr</code> di <code>Row</code> e <code>Column</code></li>
 <li>l&#39;attributo <code>style</code> di <code>Text</code></li>
+<li>gli attributi <code>color</code> e <code>size</code> di <code>Icon</code></li>
 </ul>
 <p class="image-container"><img src="img/4b2614049290033f.jpg"></p>
-<aside class="special"><p>non sentirti legato al disegno, libera la fantasia e sperimenta quanto più vuoi!</p>
+<aside class="special"><p>Non sentirti legato al disegno, libera la fantasia e sperimenta quanto più vuoi!</p>
 </aside>
 
 
@@ -131,13 +134,13 @@ class MyHomePage extends StatelessWidget {
 <p>InkWell è uno dei widget piú comuni per rendere interattivo un wigdet.<br>Inserendo un widget come child di un InkWell, sarà infatti possibile specificare le azioni da compiere a fronte di un tap, doppio tap, long press, etc.</p>
 <p>Le azioni da compiere a fronte di un evento di tocco sono descritte da funzioni di eseguire, che possono essere fornite al widget in uno dei seguenti modi:</p>
 <pre><code>InkWell(
-    onTap: () {
-    print(&#34;tapped!&#34;);
-    },
-    onDoubleTap: () {
-    print(&#34;double tapped!&#34;);
-    },
-    child: //Widget da rendere tappabile,
+  onTap: () {
+  print(&#34;tapped!&#34;);
+  },
+  onDoubleTap: () {
+  print(&#34;double tapped!&#34;);
+  },
+  child: //Widget da rendere tappabile,
 ),
 </code></pre>
 <h2 is-upgraded>La navigazione</h2>
@@ -145,15 +148,20 @@ class MyHomePage extends StatelessWidget {
 <p>La navigazione è gestita da un componente specializzato chiamato Navigator.</p>
 <p>Per navigare su una nuova schermata, un esempio di come effettuare il push di essa nello stack (pila) di navigazione in questo modo:</p>
 <pre><code>Navigator.of(context)
-.push(MaterialPageRoute(
+  .push(MaterialPageRoute(
     builder:(context){
         return NewPage(); //la nuova pagina da pushare sulla navigazione
-    }),
+    },
+  ),
 );
 </code></pre>
 <p>Il codice riportato ottiene un riferimento all&#39;istanza di <code>Navigator</code><br>relativa al contesto attuale, e richiede il push di una nuova pagina,<br>costruita mediante il builder messo a disposizione dalla classe <code>MaterialPageRoute</code>.</p>
-<h2 is-upgraded>Rendere interattivo il biglietto da visita</h2>
-<p>È possibile combinare <code>InkWell</code> e le azioni col <code>Navigator</code> per aggiungere interattività<br>e navigare su una seconda schermata, che al momento sarà vuota.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Rendere interattivo il biglietto da visita" duration="0">
+        <p>È possibile combinare <code>InkWell</code> e le azioni col <code>Navigator</code> per aggiungere interattività<br>e navigare su una seconda schermata, che al momento sarà vuota.</p>
 <p>Per fare ciò:</p>
 <ol type="1">
 <li>Crea una nuova schermata aggiungendo in fondo a <code>main.dart</code> il seguente<pre><code>class MyBiography extends StatelessWidget {
