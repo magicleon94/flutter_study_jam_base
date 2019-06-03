@@ -22,7 +22,7 @@ Tra le qualità di Flutter spiccano:
 - hot reload, che permette di sincronizzare le modifiche al codice con il dispositivo in maniera quasi istantanea, applicandole direttamente preservando lo stato dell'app. In questo modo sarà possibile vedere in tempo reale le modifiche effettuate senza dover incorrere in fastidiosi riavvii dell'applicazione.
 - totale controllo sulle animazioni
 
-Questa tecnologia sta subendo una forte crescita ed è utilizzata da un numero di aziende e sviluppatori indipendenti sempre crescente (basti vedere lo [showcase](https://flutter.dev/showcase).
+Questa tecnologia sta subendo una forte crescita ed è utilizzata da un numero di aziende e sviluppatori indipendenti sempre crescente (basti vedere lo [showcase](https://flutter.dev/showcase)).
 
 Basta parlare, ora è il momento di mettersi a lavoro!
 
@@ -34,17 +34,21 @@ Prima di iniziare sono necessarie due cose, [installare Flutter sul proprio comp
 Una volta fatto ciò saremo in grado di scrivere applicazioni in Flutter e di eseguire su:
 * dispositivi fisici 
 * emulatore Android
-* emulatore iOS
+* emulatore iOS (disponibile solo se si usa MacOS)
 
 Positive
-: Ricorda di lanciare il comando `flutter doctor` durante gli step dell'installazione in modo da avere una lista di quel che ancora manca da configurare.
+: Ricorda di lanciare il comando `flutter doctor` da riga di comando durante gli step dell'installazione in modo da avere una lista di quel che ancora manca da configurare.
+
+Una volta terminata la configurazione, l'output di `flutter doctor` dovrebbe essere simile a questo:
+
+<img src="./flutter_doctor.png" style="width: 50%; height: 50%">
 
 ## Crea un nuovo progetto Flutter
 Duration 00:05
 
 A seconda dell'editor scelto, crea un nuovo progetto Flutter seguendo le istruzioni a [questo link](https://flutter.dev/docs/get-started/test-drive).
 
-Chiama l'applicazione BIVI.
+Chiama l'applicazione BIVI, nome "originale" che sta per **Bi**glietto da **vi**sita!
 
 Una volta creato il progetto, lancialo su un emulatore o un device fisico per assicurarti del corretto funzionamento dell'installazione di Flutter. Segui gli altri step delle istruzioni in modo da provare l'hot reload e da acquisire familiarità con l'ambiente.
 
@@ -66,12 +70,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,17 +95,18 @@ Duration 01:30
 
 In questa sezione creerai la pagina contenente la prima parte del biglietto da visita.
 
-Utilizza i widget `Card`, `Container`, `Row`, `Column` e `Text`per realizzare un layout simile a quello in figura.
+Utilizza i widget `Card`, `Container`, `Row`, `Column`, `Icon` e `Text`per realizzare un layout simile a quello in figura.
 Ricorda:
 - gli attributi `color`, `width` ed `height` di `Container`
 - la dimensione di una `Card` è dettata dal `Container ` che la contiene
 - gli attributi `MainAxisAlignment` e `CrossAxisAlignmenr` di `Row` e `Column`
 - l'attributo `style` di `Text`
+- gli attributi `color` e `size` di `Icon`
 
-<img src="./card.jpg" style="width: 200px"/>
+<img src="./card.jpg" style="width: 50%; height: 50%"/>
 
 Positive
-: non sentirti legato al disegno, libera la fantasia e sperimenta quanto più vuoi!
+: Non sentirti legato al disegno, libera la fantasia e sperimenta quanto più vuoi!
 
 ## Interattività e navigazione
 Duration 01:00
@@ -114,13 +119,13 @@ Le azioni da compiere a fronte di un evento di tocco sono descritte da funzioni 
 
 ``` dart
 InkWell(
-    onTap: () {
-    print("tapped!");
-    },
-    onDoubleTap: () {
-    print("double tapped!");
-    },
-    child: //Widget da rendere tappabile,
+  onTap: () {
+  print("tapped!");
+  },
+  onDoubleTap: () {
+  print("double tapped!");
+  },
+  child: //Widget da rendere tappabile,
 ),
 ```
 
@@ -134,10 +139,11 @@ Per navigare su una nuova schermata, un esempio di come effettuare il push di es
 
 ``` dart
 Navigator.of(context)
-.push(MaterialPageRoute(
+  .push(MaterialPageRoute(
     builder:(context){
         return NewPage(); //la nuova pagina da pushare sulla navigazione
-    }),
+    },
+  ),
 );
 ```
 
@@ -145,7 +151,7 @@ Il codice riportato ottiene un riferimento all'istanza di `Navigator`
 relativa al contesto attuale, e richiede il push di una nuova pagina,
 costruita mediante il builder messo a disposizione dalla classe `MaterialPageRoute`.
 
-### Rendere interattivo il biglietto da visita
+## Rendere interattivo il biglietto da visita
 È possibile combinare `InkWell` e le azioni col `Navigator` per aggiungere interattività 
 e navigare su una seconda schermata, che al momento sarà vuota.
 
@@ -203,7 +209,7 @@ Image.network(
 ## Completa la seconda schermata
 Duration 00:15
 Modifica il widget `MyBiography` includendo un'immagine dalla rete ed un testo in basso.
-<img src="./biography.jpg" style="width: 200px"/>
+<img src="./biography.jpg" style="width: 50%; height: 50%"/>
 
 ## Fine!
 Se sei arrivato fin qui significa che hai finito tutto in tempo, grande!
