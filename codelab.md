@@ -7,7 +7,7 @@ status: draft
 # BIVI - Biglietto da Visita, a Flutter Codelab
 
 ## Cosa è Flutter?
-Duration 00:02
+
 
 Flutter è il nuovo framework made in Google per la realizzazione di UI in maniera semplice e veloce.
 Il linguaggio di programmazione è Dart, anch'esso di casa Google.
@@ -27,7 +27,7 @@ Questa tecnologia sta subendo una forte crescita ed è utilizzata da un numero d
 Basta parlare, ora è il momento di mettersi a lavoro!
 
 ## Preparazione
-Duration 00:20
+
 
 Prima di iniziare sono necessarie due cose, [installare Flutter sul proprio computer](https://flutter.dev/docs/get-started/install) e [configurare un editor per utilizzarlo con Flutter](https://flutter.dev/docs/get-started/editor).
 
@@ -44,7 +44,6 @@ Una volta terminata la configurazione, l'output di `flutter doctor` dovrebbe ess
 <img src="./flutter_doctor.png" style="width: 50%; height: 50%">
 
 ## Crea un nuovo progetto Flutter
-Duration 00:05
 
 A seconda dell'editor scelto, crea un nuovo progetto Flutter seguendo le istruzioni a [questo link](https://flutter.dev/docs/get-started/test-drive).
 
@@ -53,7 +52,7 @@ Chiama l'applicazione BIVI, nome "originale" che sta per **Bi**glietto da **vi**
 Una volta creato il progetto, lancialo su un emulatore o un device fisico per assicurarti del corretto funzionamento dell'installazione di Flutter. Segui gli altri step delle istruzioni in modo da provare l'hot reload e da acquisire familiarità con l'ambiente.
 
 ## Rimuovi il codice di esempio per un inizio pulito
-Duration 00:02
+
 
 Cancella tutto il codice contenuto in `lib/main.dart` ed incolla il seguente:
 
@@ -91,11 +90,11 @@ class HomePage extends StatelessWidget {
 ```
 
 ## Creazione della pagina principale
-Duration 01:30
+
 
 In questa sezione creerai la pagina contenente la prima parte del biglietto da visita.
 
-Utilizza i widget `Card`, `Container`, `Row`, `Column`, `Icon` e `Text`per realizzare un layout simile a quello in figura.
+Utilizza i widget `Card`, `Container`, `Center`, `Padding`, `Row`, `Column`, `Icon` e `Text` per realizzare un layout simile a quello in figura.
 Ricorda:
 - gli attributi `color`, `width` ed `height` di `Container`
 - la dimensione di una `Card` è dettata dal `Container ` che la contiene
@@ -109,7 +108,6 @@ Positive
 : Non sentirti legato al disegno, libera la fantasia e sperimenta quanto più vuoi!
 
 ## Interattività e navigazione
-Duration 01:00
 
 ### Il widget InkWell
 InkWell è uno dei widget piú comuni per rendere interattivo un wigdet. 
@@ -175,7 +173,6 @@ class MyBiography extends StatelessWidget {
   }
 }
 ```
-
 2. Rendi tappabile il biglietto da visita inserendolo in un `InkWell` ed usando `Navigator` in questo modo:
 ``` dart
 Navigator.of(context)
@@ -187,7 +184,7 @@ Navigator.of(context)
 ```
 
 ## Caricamento immagini dalla rete
-Duration 00:05
+
 In Flutter le immagini possono essere mostrate in diversi modi:
 * `Image.asset(path)`
 * `Image.file(file)`
@@ -205,9 +202,8 @@ Image.network(
 );
 ```
 
-
 ## Completa la seconda schermata
-Duration 00:15
+
 Modifica il widget `MyBiography` includendo un'immagine dalla rete ed un testo in basso.
 <img src="./biography.jpg" style="width: 50%; height: 50%"/>
 
@@ -215,5 +211,3 @@ Modifica il widget `MyBiography` includendo un'immagine dalla rete ed un testo i
 Se sei arrivato fin qui significa che hai finito tutto in tempo, grande!
 
 Sentiti libero di sperimentare con altri widget dal [catalogo di Flutter](https://flutter.dev/docs/development/ui/widgets) e di chiedere al team eventuali dubbi o idee su misura per te!
-
-
