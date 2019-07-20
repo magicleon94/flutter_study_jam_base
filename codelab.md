@@ -98,7 +98,7 @@ Utilizza i widget `Card`, `Container`, `Center`, `Padding`, `Row`, `Column`, `Ic
 Ricorda:
 - gli attributi `color`, `width` ed `height` di `Container`
 - la dimensione di una `Card` è dettata dal `Container ` che la contiene
-- gli attributi `MainAxisAlignment` e `CrossAxisAlignmenr` di `Row` e `Column`
+- gli attributi `MainAxisAlignment` e `CrossAxisAlignment` di `Row` e `Column`
 - l'attributo `style` di `Text`
 - gli attributi `color` e `size` di `Icon`
 
@@ -106,6 +106,9 @@ Ricorda:
 
 Positive
 : Non sentirti legato al disegno, libera la fantasia e sperimenta quanto più vuoi!
+
+Positive
+: Puoi trovare [qua](https://github.com/magicleon94/flutter_study_jam_base/blob/step_1/bivi/lib/main.dart) un semplice esempio.
 
 ## Interattività e navigazione
 
@@ -183,6 +186,9 @@ Navigator.of(context)
 );
 ```
 
+Positive
+: Puoi trovare [qua](https://github.com/magicleon94/flutter_study_jam_base/blob/step_2/bivi/lib/main.dart) un semplice esempio.
+
 ## Caricamento immagini dalla rete
 
 In Flutter le immagini possono essere mostrate in diversi modi:
@@ -206,6 +212,9 @@ Image.network(
 
 Modifica il widget `MyBiography` includendo un'immagine dalla rete ed un testo in basso.
 <img src="./biography.jpg" style="width: 50%; height: 50%"/>
+
+Positive
+: Puoi trovare [qua](https://github.com/magicleon94/flutter_study_jam_base/blob/step_3/bivi/lib/main.dart) un semplice esempio.
 
 ## Fine!
 Se sei arrivato fin qui significa che hai finito tutto in tempo, grande!
